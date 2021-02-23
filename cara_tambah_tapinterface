@@ -1,0 +1,9 @@
+cara buat interface loopback di linux(tap interface)
+
+sudo tunctl -t tap0
+sudo ifconfig tap0 192.168.0.2/24 netmask 255.255.255.0 up 
+#biar konfigurasi tadi tidak hilang ketika shutdown tambahkan baris perintah ini
+sudo crontab -e
+#tambah di baris bagian bawah
+@reboot /usr/sbin/tunctl -t tap0 && /sbin/ifconfig tap0 192.168.0.2 netmask 255.255.255.0 up
+
