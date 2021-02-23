@@ -1,2 +1,2 @@
-# gns3_labsimulation
-file konfig saya
+# gns3_basickonfig
+
