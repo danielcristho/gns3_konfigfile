@@ -1,0 +1,9 @@
+# Mikrotik side
+ip dns set allow-remote-requests=yes servers=8.8.8.8,8.8.8.4
+ip route add gateway=192.168.0.2
+ip address add address=192.168.0.1/24 interface=ether1   
+# set nat in terminal                                        
+iptables -t nat -A POSTROUTING -o wlp3s0(interface yg konek ke internet) -j MASQUERADE
+#tes ping
+
+
